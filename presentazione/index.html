@@ -58,6 +58,11 @@ body{
 .h1,.h2,.h3,.big{font-family:var(--display); text-wrap:balance}
 .h1{font-size:calc(var(--u)*112); font-weight:700; line-height:1.05; letter-spacing:calc(var(--u)*-2)}
 .h2{font-size:calc(var(--u)*72); font-weight:700; line-height:1.1; letter-spacing:calc(var(--u)*-1)}
+/* Phrases that replace each other (slide 4). At rest only the last one shows, so the slide reads complete
+   when reached by going back, printed, or captured before the sequence ends. */
+.rotator{display:grid; font-family:var(--display); font-size:calc(var(--u)*96); font-weight:700; line-height:1.08; letter-spacing:calc(var(--u)*-2); min-height:calc(var(--u)*208)}
+.rotator>span{grid-area:1/1; align-self:start; opacity:0}
+.rotator>span:last-child{opacity:1}
 .h3{font-size:calc(var(--u)*40); font-weight:600; line-height:1.2}
 .h3.s{font-size:calc(var(--u)*32)}
 .big{font-weight:700; line-height:1; font-variant-numeric:tabular-nums}
@@ -192,42 +197,48 @@ b{font-weight:700}
 </section>
 
 <!-- 2 -->
-<section class="slide" id="s2" aria-label="Il viaggio si sceglie su TikTok">
-  <h2 data-a class="h2">Il viaggio oggi si sceglie su TikTok</h2>
+<section class="slide" id="s2" aria-label="Il viaggio oggi nasce su TikTok">
+  <h2 data-a class="h2">Il viaggio oggi nasce su TikTok</h2>
   <div class="grid" style="--cols:1fr 1fr">
     <div data-a class="card" style="--pad:56; --gap:20">
       <p class="big t144 acc" data-count="48" data-suf="%">48%</p>
       <p class="t40 fg" style="font-family:var(--display); font-weight:600; line-height:1.2">della Gen Z trova idee di vacanza su TikTok</p>
-      <p class="t24 muted">Fonte: TUI Musement, indagine su Italia, Spagna e Regno Unito, 2026</p>
+      <p class="t24 muted">Fonte: TUI Musement, 2026</p>
     </div>
     <div data-a class="card" style="--pad:56; --gap:20">
-      <p class="big t144 acc" data-count="361" data-suf=" su 397" style="font-size:calc(var(--u)*120)">361 su 397</p>
-      <p class="t40 fg" style="font-family:var(--display); font-weight:600; line-height:1.2">video analizzati sono consigli di viaggio</p>
-      <p class="t24 muted">Fonte: dati Locus.ai, ottobre 2026</p>
+      <p class="big t144 acc" data-count="43" data-suf="%">43%</p>
+      <p class="t40 fg" style="font-family:var(--display); font-weight:600; line-height:1.2">dei viaggiatori ha prenotato dopo un video virale</p>
+      <p class="t24 muted">Fonte: TUI Musement, 2026</p>
     </div>
   </div>
+  <div data-a class="band t32"><b>Chi legge questi video vede la domanda prima che diventi prenotazione.</b></div>
   <p class="foot">Locus.ai</p><p class="pnum">02</p>
-  <aside>Quasi metà della Gen Z prende idee di vacanza da TikTok: lo dice un’indagine TUI Musement del 2026 che include l’Italia. E nei nostri dati, 361 video su 397 sono consigli pratici su dove e quando andare. Chi guarda questi video sta già pianificando.</aside>
+  <aside>Da dove nasce l’opportunità. Quasi metà della Gen Z prende idee di vacanza da TikTok, e il 43% dei viaggiatori ha prenotato dopo aver visto un video virale: lo dice un’indagine TUI Musement del 2026 che include l’Italia. Il video viene prima della prenotazione. Quindi chi legge questi video vede la domanda in anticipo, ed è esattamente questo che serve ad agenzie, tour operator e DMO.</aside>
 </section>
 
 <!-- 3 -->
-<section class="slide" id="s3" aria-label="Il problema">
-  <h2 data-a class="h2">Ma nessuno ascolta questi video</h2>
+<section class="slide" id="s3" aria-label="Il gap di mercato">
+  <h2 data-a class="h2">Perché nessuno usa questi dati?</h2>
   <div class="grid" style="--cols:1fr 1fr 1fr">
-    <div data-a class="card rail" style="--pad:44; --gap:24; justify-content:space-between"><h3 class="h3 acc">Un volume che nessuno legge</h3><p class="t24 muted">Fonte: dati Locus.ai, ottobre 2026</p></div>
+    <div data-a class="card rail" style="--pad:44; --gap:24; justify-content:space-between"><h3 class="h3 acc">Sono video, non testo</h3><p class="t24 soft">Parlato e immagini non si possono cercare</p></div>
     <div data-a class="card rail" style="--pad:44; --gap:24; justify-content:space-between"><h3 class="h3 acc">I dati ufficiali arrivano tardi</h3><p class="t24 muted">Fonte: Il Post, 2016</p></div>
-    <div data-a class="card rail" style="--pad:44; --gap:24; justify-content:space-between"><h3 class="h3 acc">Strumenti generici, non pensati per il turismo</h3><p class="t24 muted">Fonte: G2, Mention</p></div>
+    <div data-a class="card rail" style="--pad:44; --gap:24; justify-content:space-between"><h3 class="h3 acc">Gli strumenti esistenti sono generici, non pensati per il turismo</h3><p class="t24 muted">Fonte: G2, Mention</p></div>
     <div data-a class="card accent span3" style="flex-direction:row; align-items:center; gap:calc(var(--u)*32); --pad:36"><h3 class="h3" style="white-space:nowrap">Risultato</h3><p class="t32">Trend scoperti tardi, folla non anticipata, borghi invisibili</p></div>
   </div>
   <p class="foot">Locus.ai</p><p class="pnum">03</p>
-  <aside>Primo, il volume: solo nelle nostre prime raccolte di ottobre 397 video e 148 milioni di visualizzazioni, con il contenuto nel parlato e nelle immagini. Secondo, i dati ufficiali arrivano tardi: i dati ISTAT definitivi di un anno escono a settembre dell’anno dopo. Terzo, gli strumenti esistenti come Brandwatch e Talkwalker sono generici e su preventivo.</aside>
+  <aside>Se la domanda nasce su TikTok, perché nessuno usa questi dati? Tre motivi. Primo, sono video, non testo: il contenuto è nel parlato e nelle immagini, e non si può cercare come un articolo o una recensione. Secondo, i dati ufficiali arrivano tardi: i dati ISTAT definitivi di un anno escono a settembre dell’anno dopo. Terzo, gli strumenti esistenti come Brandwatch e Talkwalker sono generici, pensati per i marchi di ogni settore, e costano su preventivo. Il risultato: i trend si scoprono tardi, la folla non si anticipa, i borghi minori restano invisibili.</aside>
 </section>
 
 <!-- 4 -->
 <section class="slide bg-accent between" id="s4" aria-label="Cos’è Locus.ai">
   <div class="stack" style="--gap:32">
     <p data-a class="eyebrow" style="color:var(--on-accent-soft)">Cos’è Locus.ai</p>
-    <h2 data-a class="h2" style="font-weight:600; line-height:1.15">Una piattaforma di social video intelligence: una pipeline AI multimodale che trascrive, analizza e geolocalizza i video brevi, e misura ogni settimana la presenza delle destinazioni nei risultati di ricerca.</h2>
+    <h2 class="rotator" aria-label="Piattaforma di social video intelligence. Pipeline AI multimodale. Trascrive, analizza e geolocalizza i video brevi. Misura ogni settimana le destinazioni nei risultati di ricerca.">
+      <span aria-hidden="true">Piattaforma di social video intelligence</span>
+      <span aria-hidden="true">Pipeline AI multimodale</span>
+      <span aria-hidden="true">Trascrive, analizza e geolocalizza i video brevi</span>
+      <span aria-hidden="true">Misura ogni settimana le destinazioni nei risultati di ricerca</span>
+    </h2>
   </div>
   <div class="grid" style="--cols:1fr 1fr 1fr 1fr; --gx:48">
     <div data-a class="ruled" style="border-top-color:#8E82F2; --gap:12"><h3 class="h3 s">Per chi</h3><p style="color:#E4E1FB">Agenzie, tour operator, DMO, Regioni e uffici del turismo</p></div>
@@ -236,7 +247,7 @@ b{font-weight:700}
     <div data-a class="ruled" style="border-top-color:#8E82F2"><h3 class="h3 s">Output</h3><p style="color:#E4E1FB">Luoghi, sentiment, trend e alert per destinazione</p></div>
   </div>
   <p class="foot">Locus.ai</p><p class="pnum">04</p>
-  <aside>Tecnicamente Locus.ai è una piattaforma di social video intelligence: una pipeline AI multimodale che prende i video brevi di TikTok, li trascrive con Whisper, li analizza con Claude, che legge testo e immagini insieme, e geolocalizza ogni luogo citato. In uscita: luoghi, sentiment, trend e alert per destinazione, misurati settimana per settimana. È pensata per agenzie, tour operator, DMO e Regioni.</aside>
+  <aside>Le frasi compaiono una alla volta. Tecnicamente Locus.ai è una piattaforma di social video intelligence: una pipeline AI multimodale che prende i video brevi di TikTok, li trascrive con Whisper, li analizza con Claude, che legge testo e immagini insieme, e geolocalizza ogni luogo citato. In uscita: luoghi, sentiment, trend e alert per destinazione, misurati settimana per settimana. È pensata per agenzie, tour operator, DMO e Regioni.</aside>
 </section>
 
 <!-- 5 -->
@@ -250,9 +261,9 @@ b{font-weight:700}
     <div data-a class="card" style="--pad:44; flex-direction:row; align-items:center; gap:calc(var(--u)*20)"><svg class="ico acc" style="width:calc(var(--u)*52); height:calc(var(--u)*52)"><use href="#i-users"/></svg><h3 class="h3">Chi parla</h3></div>
     <div data-a class="card" style="--pad:44; flex-direction:row; align-items:center; gap:calc(var(--u)*20)"><svg class="ico amber" style="width:calc(var(--u)*52); height:calc(var(--u)*52)"><use href="#i-warn"/></svg><h3 class="h3">Affollamento</h3></div>
   </div>
-  <div data-a class="band"><b>Poi:</b> trend, alert, video più spinti.</div>
+  <div data-a class="band"><b>Poi:</b> trend, alert, video di tendenza.</div>
   <p class="foot">Locus.ai</p><p class="pnum">05</p>
-  <aside>Da ogni video Locus estrae sei informazioni: i luoghi, anche il singolo mercatino; il sentiment del creator verso ogni luogo; di cosa si parla, come prezzi, folla, cibo; i prodotti tipici; chi parla e in che lingua; i segnali di affollamento. Poi mette insieme tutti i video e calcola trend, alert e i video che TikTok spinge di più.</aside>
+  <aside>Da ogni video Locus estrae sei informazioni: i luoghi, anche il singolo mercatino; il sentiment del creator verso ogni luogo; di cosa si parla, come prezzi, folla, cibo; i prodotti tipici; chi parla e in che lingua; i segnali di affollamento. Poi mette insieme tutti i video e calcola trend, alert e i video di tendenza.</aside>
 </section>
 
 <!-- 6 -->
@@ -263,9 +274,9 @@ b{font-weight:700}
   </div>
   <div class="grid" style="--cols:calc(var(--u)*560) 1fr; --gx:64; --align:start">
     <div data-a class="card accent" style="--pad:56; --gap:20">
-      <p class="big t144" data-count="43" data-suf="%">43%</p>
-      <p class="t32">dei viaggiatori ha prenotato dopo un video virale</p>
-      <p class="t24" style="color:var(--on-accent-soft)">Fonte: TUI Musement, 2026</p>
+      <p class="big t144" data-count="361">361</p>
+      <p class="t32">su 397 video analizzati sono consigli di viaggio</p>
+      <p class="t24" style="color:var(--on-accent-soft)">Fonte: dati Locus.ai, ottobre 2026</p>
     </div>
     <div class="stack" style="--gap:36">
       <div data-a class="stack" style="--gap:6"><h3 class="h3 s acc">Ogni settimana, una misura</h3><p class="soft">Una meta che sale si vede mentre sale</p></div>
@@ -275,7 +286,7 @@ b{font-weight:700}
     </div>
   </div>
   <p class="foot">Locus.ai</p><p class="pnum">06</p>
-  <aside>La slide più importante. Il video viene prima della prenotazione, e il 43% dei viaggiatori ha prenotato dopo un video virale: chi legge i video legge la domanda in anticipo. Locus misura ogni settimana quanto spazio ha ogni meta su TikTok e lancia gli alert da solo. Per un operatore significa muoversi prima della concorrenza. Il passo successivo, con abbastanza storico, sono i modelli di previsione della domanda.</aside>
+  <aside>La slide più importante. Nei nostri dati, 361 video su 397 sono consigli pratici su dove e quando andare: chi li guarda sta già pianificando, quindi chi legge i video legge la domanda in anticipo. Locus misura ogni settimana quanto spazio ha ogni meta su TikTok e lancia gli alert da solo. Per un operatore significa muoversi prima della concorrenza. Il passo successivo, con abbastanza storico, sono i modelli di previsione della domanda.</aside>
 </section>
 
 <!-- 7 -->
@@ -674,6 +685,7 @@ b{font-weight:700}
         animate(0, +el.dataset.count, { duration: 0.9, ease, delay: 0.2 + i * 0.05, onUpdate: (v) => { el.textContent = format(el, v); } });
       });
     }
+    playRotator(slide);
     // Whatever happens to the animations (background tab, throttled frames), the slide ends complete.
     clearTimeout(slide._settle);
     slide._settle = setTimeout(() => {
@@ -684,7 +696,41 @@ b{font-weight:700}
     }, 1800);
   }
 
+  function settleRotator(slide) {
+    clearTimeout(slide._rot);
+    slide.querySelectorAll(".rotator > span").forEach((el) => {
+      el.getAnimations?.().forEach((a) => a.cancel());
+      el.style.opacity = ""; el.style.transform = "";
+    });
+  }
+
+  // Each phrase rises in, holds, and gives way to the next; the last one stays. Plain WAAPI: one animation
+  // per phrase with keyframe offsets, filled both ways so a phrase never shows before its turn.
+  // Reduced motion: the final phrase only, shown at rest by the CSS.
+  function playRotator(slide) {
+    const phrases = [...slide.querySelectorAll(".rotator > span")];
+    if (!phrases.length || reduce || !phrases[0].animate) return;
+    const rise = Math.round(28 * unit());
+    const out = "cubic-bezier(0.23, 1, 0.32, 1)";
+    const gap = 1600, hold = 1250, enter = 500, leave = 300, start = 350;
+    const down = `translateY(${rise}px)`, up = `translateY(${-rise}px)`, still = "translateY(0px)";
+    phrases.forEach((el, i) => {
+      const last = i === phrases.length - 1;
+      const total = last ? enter : hold + leave;
+      const frames = last
+        ? [{ opacity: 0, transform: down, easing: out }, { opacity: 1, transform: still }]
+        : [{ opacity: 0, transform: down, easing: out, offset: 0 },
+           { opacity: 1, transform: still, offset: enter / total },
+           { opacity: 1, transform: still, easing: out, offset: hold / total },
+           { opacity: 0, transform: up, offset: 1 }];
+      el.animate(frames, { duration: total, delay: start + i * gap, fill: "both" });
+    });
+    clearTimeout(slide._rot);
+    slide._rot = setTimeout(() => settleRotator(slide), start + phrases.length * gap + 600);
+  }
+
   function settleNow(slide) {
+    settleRotator(slide);
     clearTimeout(slide._settle);
     slide.querySelectorAll("[data-a], [data-bar]").forEach((el) => {
       el.getAnimations?.().forEach((a) => a.cancel());
